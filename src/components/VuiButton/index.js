@@ -25,7 +25,15 @@ import PropTypes from "prop-types";
 import VuiButtonRoot from "components/VuiButton/VuiButtonRoot";
 
 const VuiButton = forwardRef(
-  ({ color, variant, size, circular, iconOnly, children, ...rest }, ref) => (
+  ({
+    size = "medium",
+    variant = "contained",
+    color = "white",
+    circular = false,
+    iconOnly = false,
+    children,
+    ...rest
+  }, ref) => (
     <VuiButtonRoot
       {...rest}
       ref={ref}
@@ -38,15 +46,6 @@ const VuiButton = forwardRef(
     </VuiButtonRoot>
   )
 );
-
-// Setting default values for the props of VuiButton
-VuiButton.defaultProps = {
-  size: "medium",
-  variant: "contained",
-  color: "white",
-  circular: false,
-  iconOnly: false,
-};
 
 // Typechecking props for the VuiButton
 VuiButton.propTypes = {

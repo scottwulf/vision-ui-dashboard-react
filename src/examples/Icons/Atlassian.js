@@ -19,7 +19,10 @@
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-function Atlassian({ size }) {
+function Atlassian({
+  color = "dark",
+  size = "16px",
+}) {
   return (
     <svg
       width={size}
@@ -52,12 +55,6 @@ function Atlassian({ size }) {
     </svg>
   );
 }
-
-// Setting default values for the props of Atlassian
-Atlassian.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
 
 // Typechecking props for the Atlassian
 Atlassian.propTypes = {

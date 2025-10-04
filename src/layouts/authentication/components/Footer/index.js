@@ -43,7 +43,7 @@ function Footer() {
       })}
     >
       <Grid container justifyContent="center">
-        <Grid item xs={12} sx={{ textAlign: "center" }}>
+        <Grid size={{ xs: 12 }} sx={{ textAlign: "center" }}>
           <VuiTypography
             variant="button"
             sx={{ textAlign: "center", fontWeight: "400 !important" }}
@@ -75,7 +75,7 @@ function Footer() {
             for a better web
           </VuiTypography>
         </Grid>
-        <Grid item xs={10}>
+        <Grid size={{ xs: 10 }}>
           <VuiBox display="flex" justifyContent="center" flexWrap="wrap" mb={3}>
             <VuiBox mr={{ xs: "20px", lg: "46px" }}>
               <VuiTypography component="a" href="#" variant="body2" color="text">

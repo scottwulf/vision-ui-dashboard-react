@@ -24,15 +24,13 @@ import PropTypes from "prop-types";
 // Custom styles for VuiSwitch
 import VuiSwitchRoot from "components/VuiSwitch/VuiSwitchRoot";
 
-const VuiSwitch = forwardRef(({ color, size, ...rest }, ref) => (
+const VuiSwitch = forwardRef(({
+  size = "medium",
+  color = "white",
+  ...rest
+}, ref) => (
   <VuiSwitchRoot {...rest} ref={ref} color="white" size={size} ownerState={{ color, size }} />
 ));
-
-// Setting default values for the props of VuiSwitch
-VuiSwitch.defaultProps = {
-  size: "medium",
-  color: "white",
-};
 
 // Typechecking props for the VuiSwitch
 VuiSwitch.propTypes = {

@@ -31,7 +31,12 @@ import VuiBox from "components/VuiBox";
 import VuiAlertRoot from "components/VuiAlert/VuiAlertRoot";
 import VuiAlertCloseIcon from "components/VuiAlert/VuiAlertCloseIcon";
 
-function VuiAlert({ color, dismissible, children, ...rest }) {
+function VuiAlert({
+  color = "info",
+  dismissible = false,
+  children,
+  ...rest
+}) {
   const [alertStatus, setAlertStatus] = useState("mount");
 
   const handleAlertStatus = () => setAlertStatus("fadeOut");
@@ -63,12 +68,6 @@ function VuiAlert({ color, dismissible, children, ...rest }) {
 
   return null;
 }
-
-// Setting default values for the props of VuiAlert
-VuiAlert.defaultProps = {
-  color: "info",
-  dismissible: false,
-};
 
 // Typechecking props of the VuiAlert
 VuiAlert.propTypes = {

@@ -27,7 +27,13 @@ import VuiTypography from "components/VuiTypography";
 // Custom styles for VuiProgress
 import VuiProgressRoot from "components/VuiProgress/VuiProgressRoot";
 
-const VuiProgress = forwardRef(({ variant, color, value, label, ...rest }, ref) => (
+const VuiProgress = forwardRef(({
+  variant = "contained",
+  color = "info",
+  value = 0,
+  label = false,
+  ...rest
+}, ref) => (
   <>
     {label && (
       <VuiTypography variant="button" fontWeight="medium" color="text">
@@ -43,14 +49,6 @@ const VuiProgress = forwardRef(({ variant, color, value, label, ...rest }, ref) 
     />
   </>
 ));
-
-// Setting default values for the props of VuiProgress
-VuiProgress.defaultProps = {
-  variant: "contained",
-  color: "info",
-  value: 0,
-  label: false,
-};
 
 // Typechecking props for the VuiProgress
 VuiProgress.propTypes = {

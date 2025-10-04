@@ -52,7 +52,7 @@ function PaymentMethod() {
       </VuiBox>
       <VuiBox>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <VuiBox
               border="2px solid"
               borderRadius="20px"
@@ -75,7 +75,7 @@ function PaymentMethod() {
               </VuiBox>
             </VuiBox>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <VuiBox
               border="2px solid"
               borderRadius="20px"

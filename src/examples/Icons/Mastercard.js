@@ -19,7 +19,12 @@
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-function Mastercard({ width, height }) {
+function Mastercard({
+  width,
+  height,
+  color = "dark",
+  size = "16px",
+}) {
   return (
     <svg
       width={width}
@@ -33,12 +38,6 @@ function Mastercard({ width, height }) {
     </svg>
   );
 }
-
-// Setting default values for the props of Mastercard
-Mastercard.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
 
 // Typechecking props for the Mastercard
 Mastercard.propTypes = {

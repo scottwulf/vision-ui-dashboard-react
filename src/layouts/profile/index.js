@@ -60,10 +60,11 @@ function Overview() {
           })}
         >
           <Grid
-            item
-            xs={12}
-            xl={4}
-            xxl={3}
+            size={{
+              xs: 12,
+              xl: 4,
+              xxl: 3,
+            }}
             sx={({ breakpoints }) => ({
               minHeight: "400px",
               [breakpoints.only("xl")]: {
@@ -74,10 +75,11 @@ function Overview() {
             <Welcome />
           </Grid>
           <Grid
-            item
-            xs={12}
-            xl={5}
-            xxl={6}
+            size={{
+              xs: 12,
+              xl: 5,
+              xxl: 6,
+            }}
             sx={({ breakpoints }) => ({
               [breakpoints.only("xl")]: {
                 gridArea: "2 / 1 / 3 / 3",
@@ -87,10 +89,11 @@ function Overview() {
             <CarInformations />
           </Grid>
           <Grid
-            item
-            xs={12}
-            xl={3}
-            xxl={3}
+            size={{
+              xs: 12,
+              xl: 3,
+              xxl: 3,
+            }}
             sx={({ breakpoints }) => ({
               [breakpoints.only("xl")]: {
                 gridArea: "1 / 2 / 2 / 3",
@@ -128,10 +131,10 @@ function Overview() {
         </Grid>
       </VuiBox>
       <Grid container spacing={3} mb="30px">
-        <Grid item xs={12} xl={3} height="100%">
+        <Grid size={{ xs: 12, xl: 3 }} height="100%">
           <PlatformSettings />
         </Grid>
-        <Grid item xs={12} xl={9}>
+        <Grid size={{ xs: 12, xl: 9 }}>
           <Card>
             <VuiBox display="flex" flexDirection="column" height="100%">
               <VuiBox display="flex" flexDirection="column" mb="24px">
@@ -143,7 +146,7 @@ function Overview() {
                 </VuiTypography>
               </VuiBox>
               <Grid container spacing={3}>
-                <Grid item xs={12} md={6} xl={4}>
+                <Grid size={{ xs: 12, md: 6, xl: 4 }}>
                   <DefaultProjectCard
                     image={profile1}
                     label="project #2"
@@ -163,7 +166,7 @@ function Overview() {
                     ]}
                   />
                 </Grid>
-                <Grid item xs={12} md={6} xl={4}>
+                <Grid size={{ xs: 12, md: 6, xl: 4 }}>
                   <DefaultProjectCard
                     image={profile2}
                     label="project #1"
@@ -183,7 +186,7 @@ function Overview() {
                     ]}
                   />
                 </Grid>
-                <Grid item xs={12} md={6} xl={4}>
+                <Grid size={{ xs: 12, md: 6, xl: 4 }}>
                   <DefaultProjectCard
                     image={profile3}
                     label="project #3"

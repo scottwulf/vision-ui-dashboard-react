@@ -22,7 +22,10 @@ import PropTypes from "prop-types";
 // Vision UI Dashboard React base styles
 import colors from "assets/theme/base/colors";
 
-function Credit({ color, size }) {
+function Credit({
+  color = "dark",
+  size = "16px",
+}) {
   return (
     <svg width="23" height="23" width={size} height={size} xmlns="http://www.w3.org/2000/svg">
       <path
@@ -32,12 +35,6 @@ function Credit({ color, size }) {
     </svg>
   );
 }
-
-// Setting default values for the props of Credit
-Credit.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
 
 // Typechecking props for the Credit
 Credit.propTypes = {

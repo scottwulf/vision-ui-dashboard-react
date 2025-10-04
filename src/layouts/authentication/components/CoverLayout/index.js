@@ -37,14 +37,14 @@ import colors from "assets/theme/base/colors";
 import tripleLinearGradient from "assets/theme/functions/tripleLinearGradient";
 
 function CoverLayout({
-  color,
-  header,
-  title,
-  description,
+  color = "info",
+  header = "",
+  title = "",
+  description = "",
   motto,
   premotto,
   image,
-  top,
+  top = 20,
   cardContent,
   children,
 }) {
@@ -211,15 +211,6 @@ function CoverLayout({
     </PageLayout>
   );
 }
-
-// Setting default values for the props of CoverLayout
-CoverLayout.defaultProps = {
-  header: "",
-  title: "",
-  description: "",
-  color: "info",
-  top: 20,
-};
 
 // Typechecking props for the CoverLayout
 CoverLayout.propTypes = {

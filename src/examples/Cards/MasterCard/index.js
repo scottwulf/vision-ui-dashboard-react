@@ -26,7 +26,12 @@ import VuiTypography from "components/VuiTypography";
 import PropTypes from "prop-types";
 import { RiMastercardFill } from "react-icons/ri";
 
-function MasterCard({ number, valid, cvv }) {
+function MasterCard({
+  number,
+  valid,
+  cvv,
+  color = "dark",
+}) {
   const numbers = [...`${number}`];
 
   if (numbers.length < 16 || numbers.length > 16) {
@@ -101,11 +106,6 @@ function MasterCard({ number, valid, cvv }) {
     </Card>
   );
 }
-
-// Setting default values for the props of MasterCard
-MasterCard.defaultProps = {
-  color: "dark",
-};
 
 // Typechecking props for the MasterCard
 MasterCard.propTypes = {

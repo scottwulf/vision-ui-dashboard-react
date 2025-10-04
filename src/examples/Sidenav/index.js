@@ -50,7 +50,12 @@ import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "co
 import SimmmpleLogo from "examples/Icons/SimmmpleLogo";
 
 // function Sidenav({ color, brand, brandName, routes, ...rest }) {
-function Sidenav({ color, brandName, routes, ...rest }) {
+function Sidenav({
+  color = "info",
+  brandName,
+  routes,
+  ...rest
+}) {
   const [controller, dispatch] = useVisionUIController();
   const { miniSidenav, transparentSidenav } = controller;
   const location = useLocation();
@@ -134,7 +139,9 @@ function Sidenav({ color, brandName, routes, ...rest }) {
         </VuiTypography>
       );
     } else if (type === "divider") {
-      returnValue = <Divider light key={key} />;
+      returnValue = <Divider key={key} sx={{
+        opacity: "0.6"
+      }} />;
     }
 
     return returnValue;
@@ -207,7 +214,9 @@ function Sidenav({ color, brandName, routes, ...rest }) {
           </VuiBox>
         </VuiBox>
       </VuiBox>
-      <Divider light />
+      <Divider sx={{
+        opacity: "0.6"
+      }} />
       <List>{renderRoutes}</List>
       <VuiBox
         my={2}
@@ -243,12 +252,6 @@ function Sidenav({ color, brandName, routes, ...rest }) {
     </SidenavRoot>
   );
 }
-
-// Setting default values for the props of Sidenav
-Sidenav.defaultProps = {
-  color: "info",
-  // brand: "",
-};
 
 // Typechecking props for the Sidenav
 Sidenav.propTypes = {

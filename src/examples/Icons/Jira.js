@@ -19,7 +19,10 @@
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-function Jira({ size }) {
+function Jira({
+  color = "dark",
+  size = "16px",
+}) {
   return (
     <svg
       width={size}
@@ -72,12 +75,6 @@ function Jira({ size }) {
     </svg>
   );
 }
-
-// Setting default values for the props of Jira
-Jira.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
 
 // Typechecking props for the Jira
 Jira.propTypes = {

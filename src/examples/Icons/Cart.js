@@ -22,7 +22,10 @@ import PropTypes from "prop-types";
 // Vision UI Dashboard React base styles
 import colors from "assets/theme/base/colors";
 
-function Cart({ color, size }) {
+function Cart({
+  color = "dark",
+  size = "16px",
+}) {
   return (
     <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg">
       <path
@@ -32,12 +35,6 @@ function Cart({ color, size }) {
     </svg>
   );
 }
-
-// Setting default values for the props of Cart
-Cart.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
 
 // Typechecking props for the Cart
 Cart.propTypes = {

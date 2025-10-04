@@ -19,7 +19,10 @@
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-function Slack({ size }) {
+function Slack({
+  color = "dark",
+  size = "16px",
+}) {
   return (
     <svg
       width={size}
@@ -62,12 +65,6 @@ function Slack({ size }) {
     </svg>
   );
 }
-
-// Setting default values for the props of Slack
-Slack.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
 
 // Typechecking props for the Slack
 Slack.propTypes = {

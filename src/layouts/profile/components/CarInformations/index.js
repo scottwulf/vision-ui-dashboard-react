@@ -112,7 +112,7 @@ const CarInformations = () => {
 								mx: 'auto !important'
 							}
 						})}>
-						<Grid item xs={12} md={5.5} xl={5.8} xxl={5.5}>
+						<Grid size={{ xs: 12, md: 5.5, xl: 5.8, xxl: 5.5 }}>
 							<VuiBox
 								display='flex'
 								p='18px'
@@ -152,7 +152,7 @@ const CarInformations = () => {
 								</VuiBox>
 							</VuiBox>
 						</Grid>
-						<Grid item xs={12} md={5.5} xl={5.8} xxl={5.5}>
+						<Grid size={{ xs: 12, md: 5.5, xl: 5.8, xxl: 5.5 }}>
 							<VuiBox
 								display='flex'
 								p='18px'
@@ -185,7 +185,7 @@ const CarInformations = () => {
 								</VuiBox>
 							</VuiBox>
 						</Grid>
-						<Grid item xs={12} md={5.5} xl={5.8} xxl={5.5}>
+						<Grid size={{ xs: 12, md: 5.5, xl: 5.8, xxl: 5.5 }}>
 							<VuiBox
 								display='flex'
 								p='18px'
@@ -225,7 +225,7 @@ const CarInformations = () => {
 								</VuiBox>
 							</VuiBox>
 						</Grid>
-						<Grid item xs={12} md={5.5} xl={5.8} xxl={5.5}>
+						<Grid size={{ xs: 12, md: 5.5, xl: 5.8, xxl: 5.5 }}>
 							<VuiBox
 								display='flex'
 								p='18px'

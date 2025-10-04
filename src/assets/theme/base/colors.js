@@ -37,7 +37,7 @@ export default {
   },
 
   transparent: {
-    main: "transparent",
+    main: "rgba(255, 255, 255, 0)",
   },
 
   white: {

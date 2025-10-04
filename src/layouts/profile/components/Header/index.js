@@ -90,12 +90,13 @@ function Header() {
           })}
         >
           <Grid
-            item
-            xs={12}
-            md={1.7}
-            lg={1.5}
-            xl={1.2}
-            xxl={0.8}
+            size={{
+              xs: 12,
+              md: 1.7,
+              lg: 1.5,
+              xl: 1.2,
+              xxl: 0.8,
+            }}
             display="flex"
             sx={({ breakpoints }) => ({
               [breakpoints.only("sm")]: {
@@ -112,7 +113,7 @@ function Header() {
               shadow="sm"
             />
           </Grid>
-          <Grid item xs={12} md={4.3} lg={4} xl={3.8} xxl={7}>
+          <Grid size={{ xs: 12, md: 4.3, lg: 4, xl: 3.8, xxl: 7 }}>
             <VuiBox
               height="100%"
               mt={0.5}
@@ -134,7 +135,7 @@ function Header() {
               </VuiTypography>
             </VuiBox>
           </Grid>
-          <Grid item xs={12} md={6} lg={6.5} xl={6} xxl={4} sx={{ ml: "auto" }}>
+          <Grid size={{ xs: 12, md: 6, lg: 6.5, xl: 6, xxl: 4 }} sx={{ ml: "auto" }}>
             <AppBar position="static">
               <Tabs
                 orientation={tabsOrientation}

@@ -19,7 +19,7 @@
 import { useState, useEffect, useMemo } from "react";
 
 // react-router components
-import { Route, Switch, Redirect, useLocation } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 
 // @mui material components
 import { ThemeProvider } from "@mui/material/styles";
@@ -43,7 +43,7 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 
 // Vision UI Dashboard React routes
-import routes from "routes";
+import reactRoutes from "routes";
 
 // Vision UI Dashboard React contexts
 import { useVisionUIController, setMiniSidenav, setOpenConfigurator } from "context";
@@ -102,7 +102,7 @@ export default function App() {
       }
 
       if (route.route) {
-        return <Route exact path={route.route} component={route.component} key={route.key} />;
+        return <Route exact path={route.route} element={route.component} key={route.key} />;
       }
 
       return null;
@@ -142,7 +142,7 @@ export default function App() {
               color={sidenavColor}
               brand=""
               brandName="VISION UI FREE"
-              routes={routes}
+              routes={reactRoutes}
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}
             />
@@ -151,10 +151,10 @@ export default function App() {
           </>
         )}
         {layout === "vr" && <Configurator />}
-        <Switch>
-          {getRoutes(routes)}
-          <Redirect from="*" to="/dashboard" />
-        </Switch>
+        <Routes>
+          {getRoutes(reactRoutes)}
+        </Routes>
+        <Navigate from="*" to="/dashboard" />
       </ThemeProvider>
     </CacheProvider>
   ) : (
@@ -166,7 +166,7 @@ export default function App() {
             color={sidenavColor}
             brand=""
             brandName="VISION UI FREE"
-            routes={routes}
+            routes={reactRoutes}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
           />
@@ -175,10 +175,10 @@ export default function App() {
         </>
       )}
       {layout === "vr" && <Configurator />}
-      <Switch>
-        {getRoutes(routes)}
-        <Redirect from="*" to="/dashboard" />
-      </Switch>
+      <Routes>
+        {getRoutes(reactRoutes)}
+      </Routes>
+      <Navigate from="*" to="/dashboard" />
     </ThemeProvider>
   );
 }

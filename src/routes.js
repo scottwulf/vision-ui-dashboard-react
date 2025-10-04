@@ -56,14 +56,14 @@ import { BsCreditCardFill } from "react-icons/bs";
 import { IoStatsChart } from "react-icons/io5";
 import { IoHome } from "react-icons/io5";
 
-const routes = [
+const reactRoutes = [
   {
     type: "collapse",
     name: "Dashboard",
     key: "dashboard",
     route: "/dashboard",
     icon: <IoHome size="15px" color="inherit" />,
-    component: Dashboard,
+    component: <Dashboard/>,
     noCollapse: true,
   },
   {
@@ -72,7 +72,7 @@ const routes = [
     key: "tables",
     route: "/tables",
     icon: <IoStatsChart size="15px" color="inherit" />,
-    component: Tables,
+    component: <Tables/>,
     noCollapse: true,
   },
   {
@@ -81,7 +81,7 @@ const routes = [
     key: "billing",
     route: "/billing",
     icon: <BsCreditCardFill size="15px" color="inherit" />,
-    component: Billing,
+    component: <Billing/>,
     noCollapse: true,
   },
   {
@@ -90,7 +90,7 @@ const routes = [
     key: "rtl",
     route: "/rtl",
     icon: <IoBuild size="15px" color="inherit" />,
-    component: RTL,
+    component: <RTL/>,
     noCollapse: true,
   },
   { type: "title", title: "Account Pages", key: "account-pages" },
@@ -100,7 +100,7 @@ const routes = [
     key: "profile",
     route: "/profile",
     icon: <BsFillPersonFill size="15px" color="inherit" />,
-    component: Profile,
+    component: <Profile/>,
     noCollapse: true,
   },
   {
@@ -109,7 +109,7 @@ const routes = [
     key: "sign-in",
     route: "/authentication/sign-in",
     icon: <IoIosDocument size="15px" color="inherit" />,
-    component: SignIn,
+    component: <SignIn/>,
     noCollapse: true,
   },
   {
@@ -118,9 +118,9 @@ const routes = [
     key: "sign-up",
     route: "/authentication/sign-up",
     icon: <IoRocketSharp size="15px" color="inherit" />,
-    component: SignUp,
+    component: <SignUp/>,
     noCollapse: true,
   },
 ];
 
-export default routes;
+export default reactRoutes;

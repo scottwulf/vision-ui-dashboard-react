@@ -29,7 +29,13 @@ import VuiButton from "components/VuiButton";
 import linearGradient from "assets/theme/functions/linearGradient";
 import colors from "assets/theme/base/colors";
 
-function Bill({ name, company, email, vat, noGutter }) {
+function Bill({
+  name,
+  company,
+  email,
+  vat,
+  noGutter = false,
+}) {
   const { gradients } = colors;
   const { bill } = gradients;
 
@@ -114,11 +120,6 @@ function Bill({ name, company, email, vat, noGutter }) {
     </VuiBox>
   );
 }
-
-// Setting default values for the props of Bill
-Bill.defaultProps = {
-  noGutter: false,
-};
 
 // Typechecking props for the Bill
 Bill.propTypes = {

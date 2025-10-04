@@ -63,7 +63,7 @@ const CreditBalance = () => {
           NEWEST
         </VuiTypography>
         <VuiBox display="flex" justifyContent="space-beetween" alignItems="center">
-          <Stack direction="row" spacing="10px" mr="auto">
+          <Stack direction="row" sx={{ gap: "10px" }} mr="auto">
             <VuiBox
               display="flex"
               mr="10px"

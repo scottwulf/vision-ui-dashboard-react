@@ -24,7 +24,12 @@ import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import { IoDocumentText } from "react-icons/io5";
 
-function Invoice({ date, id, price }) {
+function Invoice({
+  date,
+  id,
+  price,
+  noGutter = false,
+}) {
   return (
     <VuiBox
       component="li"
@@ -55,11 +60,6 @@ function Invoice({ date, id, price }) {
     </VuiBox>
   );
 }
-
-// Setting default values for the props of Invoice
-Invoice.defaultProps = {
-  noGutter: false,
-};
 
 // Typechecking props for the Invoice
 Invoice.propTypes = {

@@ -77,7 +77,7 @@ function RTL() {
       <VuiBox py={3}>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} xl={3}>
+            <Grid size={{ xs: 12, sm: 6, xl: 3 }}>
               <MiniStatisticsCard
                 title={{ text: "أموال اليوم", fontWeight: "regular" }}
                 count="$53,000"
@@ -85,7 +85,7 @@ function RTL() {
                 icon={{ color: "info", component: <IoWallet size="22px" color="white" /> }}
               />
             </Grid>
-            <Grid item xs={12} sm={6} xl={3}>
+            <Grid size={{ xs: 12, sm: 6, xl: 3 }}>
               <MiniStatisticsCard
                 title={{ text: "مستخدمي اليوم" }}
                 count="2,300"
@@ -93,7 +93,7 @@ function RTL() {
                 icon={{ color: "info", component: <IoGlobe size="22px" color="white" /> }}
               />
             </Grid>
-            <Grid item xs={12} sm={6} xl={3}>
+            <Grid size={{ xs: 12, sm: 6, xl: 3 }}>
               <MiniStatisticsCard
                 title={{ text: "عملاء جدد" }}
                 count="+3,462"
@@ -101,7 +101,7 @@ function RTL() {
                 icon={{ color: "info", component: <IoDocumentText size="22px" color="white" /> }}
               />
             </Grid>
-            <Grid item xs={12} sm={6} xl={3}>
+            <Grid size={{ xs: 12, sm: 6, xl: 3 }}>
               <MiniStatisticsCard
                 title={{ text: "إجمالي المبيعات" }}
                 count="$103,430"
@@ -113,20 +113,20 @@ function RTL() {
         </VuiBox>
         <VuiBox mb={3}>
           <Grid container spacing="18px">
-            <Grid item xs={12} xl={5}>
+            <Grid size={{ xs: 12, xl: 5 }}>
               <WelcomeMark />
             </Grid>
-            <Grid item xs={12} lg={6} xl={3}>
+            <Grid size={{ xs: 12, lg: 6, xl: 3 }}>
               <SatisfactionRate />
             </Grid>
-            <Grid item xs={12} lg={6} xl={4}>
+            <Grid size={{ xs: 12, lg: 6, xl: 4 }}>
               <ReferralTracking />
             </Grid>
           </Grid>
         </VuiBox>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} lg={7}>
+            <Grid size={{ xs: 12, lg: 7 }}>
               <Card>
                 <VuiBox sx={{ height: "100%" }}>
                   <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
@@ -149,7 +149,7 @@ function RTL() {
                 </VuiBox>
               </Card>
             </Grid>
-            <Grid item xs={12} lg={5}>
+            <Grid size={{ xs: 12, lg: 5 }}>
               <Card>
                 <VuiBox>
                   <VuiBox
@@ -181,7 +181,7 @@ function RTL() {
                     </VuiTypography>
                   </VuiBox>
                   <Grid container spacing="50px">
-                    <Grid item xs={6} md={3} lg={3}>
+                    <Grid size={{ xs: 6, md: 3, lg: 3 }}>
                       <Stack
                         direction="row"
                         spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
@@ -205,7 +205,7 @@ function RTL() {
                       </VuiTypography>
                       <VuiProgress value={60} color="info" sx={{ background: "#2D2E5F" }} />
                     </Grid>
-                    <Grid item xs={6} md={3} lg={3}>
+                    <Grid size={{ xs: 6, md: 3, lg: 3 }}>
                       <Stack
                         direction="row"
                         spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
@@ -229,7 +229,7 @@ function RTL() {
                       </VuiTypography>
                       <VuiProgress value={60} color="info" sx={{ background: "#2D2E5F" }} />
                     </Grid>
-                    <Grid item xs={6} md={3} lg={3}>
+                    <Grid size={{ xs: 6, md: 3, lg: 3 }}>
                       <Stack
                         direction="row"
                         spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
@@ -253,7 +253,7 @@ function RTL() {
                       </VuiTypography>
                       <VuiProgress value={60} color="info" sx={{ background: "#2D2E5F" }} />
                     </Grid>
-                    <Grid item xs={6} md={3} lg={3}>
+                    <Grid size={{ xs: 6, md: 3, lg: 3 }}>
                       <Stack
                         direction="row"
                         spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
@@ -284,10 +284,10 @@ function RTL() {
           </Grid>
         </VuiBox>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6} lg={8}>
+          <Grid size={{ xs: 12, md: 6, lg: 8 }}>
             <Projects />
           </Grid>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid size={{ xs: 12, md: 6, lg: 4 }}>
             <OrderOverview />
           </Grid>
         </Grid>

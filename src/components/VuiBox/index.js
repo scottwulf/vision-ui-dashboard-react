@@ -25,7 +25,15 @@ import PropTypes from "prop-types";
 import VuiBoxRoot from "components/VuiBox/VuiBoxRoot";
 
 const VuiBox = forwardRef(
-  ({ variant, bgColor, color, opacity, borderRadius, shadow, ...rest }, ref) => (
+  ({
+    variant = "contained",
+    bgColor = "transparent",
+    color = "dark",
+    opacity = 1,
+    borderRadius = "none",
+    shadow = "none",
+    ...rest
+  }, ref) => (
     <VuiBoxRoot
       {...rest}
       ref={ref}
@@ -33,16 +41,6 @@ const VuiBox = forwardRef(
     />
   )
 );
-
-// Setting default values for the props of VuiBox
-VuiBox.defaultProps = {
-  variant: "contained",
-  bgColor: "transparent",
-  color: "dark",
-  opacity: 1,
-  borderRadius: "none",
-  shadow: "none",
-};
 
 // Typechecking props for the VuiBox
 VuiBox.propTypes = {

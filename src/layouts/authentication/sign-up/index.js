@@ -85,7 +85,7 @@ function SignIn() {
           >
             Register with
           </VuiTypography>
-          <Stack mb="25px" justifyContent="center" alignItems="center" direction="row" spacing={2}>
+          <Stack mb="25px" justifyContent="center" alignItems="center" direction="row" sx={{ gap: 2 }}>
             <GradientBorder borderRadius="xl">
               <a href="#">
                 <IconButton

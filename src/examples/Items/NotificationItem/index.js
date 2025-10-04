@@ -32,7 +32,13 @@ import VuiTypography from "components/VuiTypography";
 // custom styles for the NotificationItem
 import { menuItem, menuImage } from "examples/Items/NotificationItem/styles";
 
-const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref) => (
+const NotificationItem = forwardRef(({
+  color = "dark",
+  image,
+  title,
+  date,
+  ...rest
+}, ref) => (
   <MenuItem {...rest} ref={ref} sx={(theme) => menuItem(theme)}>
     <VuiBox
       width="2.25rem"
@@ -73,11 +79,6 @@ const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref
     </VuiBox>
   </MenuItem>
 ));
-
-// Setting default values for the props of NotificationItem
-NotificationItem.defaultProps = {
-  color: "dark",
-};
 
 // Typechecking props for the NotificationItem
 NotificationItem.propTypes = {

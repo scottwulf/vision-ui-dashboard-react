@@ -27,13 +27,13 @@ import VuiTypographyRoot from "components/VuiTypography/VuiTypographyRoot";
 const VuiTypography = forwardRef(
   (
     {
-      color,
-      fontWeight,
-      textTransform,
-      verticalAlign,
-      fontSize,
-      textGradient,
-      opacity,
+      color = "dark",
+      fontWeight = false,
+      fontSize = "16px",
+      textTransform = "none",
+      verticalAlign = "unset",
+      textGradient = false,
+      opacity = 1,
       children,
       ...rest
     },
@@ -56,17 +56,6 @@ const VuiTypography = forwardRef(
     </VuiTypographyRoot>
   )
 );
-
-// Setting default values for the props of VuiTypography
-VuiTypography.defaultProps = {
-  color: "dark",
-  fontWeight: false,
-  fontSize: "16px",
-  textTransform: "none",
-  verticalAlign: "unset",
-  textGradient: false,
-  opacity: 1,
-};
 
 // Typechecking props for the VuiTypography
 VuiTypography.propTypes = {

@@ -30,7 +30,17 @@ import VuiInputIconRoot from "components/VuiInput/VuiInputIconRoot";
 // Vision UI Dashboard React contexts
 import { useVisionUIController } from "context";
 
-const VuiInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, ref) => {
+const VuiInput = forwardRef(({
+  size = "medium",
+  icon = {
+    component: false,
+    direction: "none",
+  },
+  error = false,
+  success = false,
+  disabled = false,
+  ...rest
+}, ref) => {
   let template;
   const [controller] = useVisionUIController();
   const { direction } = controller;
@@ -70,18 +80,6 @@ const VuiInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, 
 
   return template;
 });
-
-// Setting default values for the props of VuiInput
-VuiInput.defaultProps = {
-  size: "medium",
-  icon: {
-    component: false,
-    direction: "none",
-  },
-  error: false,
-  success: false,
-  disabled: false,
-};
 
 // Typechecking props for the VuiInput
 VuiInput.propTypes = {

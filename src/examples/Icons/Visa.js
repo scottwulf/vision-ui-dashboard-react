@@ -19,7 +19,12 @@
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-function Visa({ width, height }) {
+function Visa({
+  width,
+  height,
+  color = "dark",
+  size = "16px",
+}) {
   return (
     <svg
       width={width}
@@ -37,12 +42,6 @@ function Visa({ width, height }) {
     </svg>
   );
 }
-
-// Setting default values for the props of Visa
-Visa.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
 
 // Typechecking props for the Visa
 Visa.propTypes = {

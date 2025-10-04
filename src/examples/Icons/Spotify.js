@@ -19,7 +19,10 @@
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-function Settings({ size }) {
+function Settings({
+  color = "dark",
+  size = "16px",
+}) {
   return (
     <svg
       width={size}
@@ -42,12 +45,6 @@ function Settings({ size }) {
     </svg>
   );
 }
-
-// Setting default values for the props of Settings
-Settings.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
 
 // Typechecking props for the Settings
 Settings.propTypes = {

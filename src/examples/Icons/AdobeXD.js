@@ -19,7 +19,10 @@
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-function AdobeXD({ size }) {
+function AdobeXD({
+  color = "dark",
+  size = "16px",
+}) {
   return (
     <svg
       width={size}
@@ -50,12 +53,6 @@ function AdobeXD({ size }) {
     </svg>
   );
 }
-
-// Setting default values for the props of AdobeXD
-AdobeXD.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
 
 // Typechecking props for the AdobeXD
 AdobeXD.propTypes = {

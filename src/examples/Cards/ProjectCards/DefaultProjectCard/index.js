@@ -31,7 +31,7 @@ import VuiTypography from "components/VuiTypography";
 import VuiButton from "components/VuiButton";
 import VuiAvatar from "components/VuiAvatar";
 
-function DefaultProjectCard({ image, label, title, description, action, authors }) {
+function DefaultProjectCard({ image, label, title, description, action, authors=[] }) {
   const renderAuthors = authors.map(({ image: media, name }) => (
     <Tooltip key={name} title={name} placement="bottom">
       <VuiAvatar
@@ -145,11 +145,6 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
     </VuiBox>
   );
 }
-
-// Setting default values for the props of DefaultProjectCard
-DefaultProjectCard.defaultProps = {
-  authors: [],
-};
 
 // Typechecking props for the DefaultProjectCard
 DefaultProjectCard.propTypes = {

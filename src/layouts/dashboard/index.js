@@ -70,7 +70,7 @@ function Dashboard() {
       <VuiBox py={3}>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} xl={3}>
+            <Grid size={{ xs: 12, md: 6, xl: 3 }}>
               <MiniStatisticsCard
                 title={{ text: "today's money", fontWeight: "regular" }}
                 count="$53,000"
@@ -78,7 +78,7 @@ function Dashboard() {
                 icon={{ color: "info", component: <IoWallet size="22px" color="white" /> }}
               />
             </Grid>
-            <Grid item xs={12} md={6} xl={3}>
+            <Grid size={{ xs: 12, md: 6, xl: 3 }}>
               <MiniStatisticsCard
                 title={{ text: "today's users" }}
                 count="2,300"
@@ -86,7 +86,7 @@ function Dashboard() {
                 icon={{ color: "info", component: <IoGlobe size="22px" color="white" /> }}
               />
             </Grid>
-            <Grid item xs={12} md={6} xl={3}>
+            <Grid size={{ xs: 12, md: 6, xl: 3 }}>
               <MiniStatisticsCard
                 title={{ text: "new clients" }}
                 count="+3,462"
@@ -94,7 +94,7 @@ function Dashboard() {
                 icon={{ color: "info", component: <IoDocumentText size="22px" color="white" /> }}
               />
             </Grid>
-            <Grid item xs={12} md={6} xl={3}>
+            <Grid size={{ xs: 12, md: 6, xl: 3 }}>
               <MiniStatisticsCard
                 title={{ text: "total sales" }}
                 count="$103,430"
@@ -106,20 +106,20 @@ function Dashboard() {
         </VuiBox>
         <VuiBox mb={3}>
           <Grid container spacing="18px">
-            <Grid item xs={12} lg={12} xl={5}>
+            <Grid size={{ xs: 12, lg: 12, xl: 5 }}>
               <WelcomeMark />
             </Grid>
-            <Grid item xs={12} lg={6} xl={3}>
+            <Grid size={{ xs: 12, lg: 6, xl: 3 }}>
               <SatisfactionRate />
             </Grid>
-            <Grid item xs={12} lg={6} xl={4}>
+            <Grid size={{ xs: 12, lg: 6, xl: 4 }}>
               <ReferralTracking />
             </Grid>
           </Grid>
         </VuiBox>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} lg={6} xl={7}>
+            <Grid size={{ xs: 12, lg: 6, xl: 7 }}>
               <Card>
                 <VuiBox sx={{ height: "100%" }}>
                   <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
@@ -142,7 +142,7 @@ function Dashboard() {
                 </VuiBox>
               </Card>
             </Grid>
-            <Grid item xs={12} lg={6} xl={5}>
+            <Grid size={{ xs: 12, lg: 6, xl: 5 }}>
               <Card>
                 <VuiBox>
                   <VuiBox
@@ -174,10 +174,10 @@ function Dashboard() {
                     </VuiTypography>
                   </VuiBox>
                   <Grid container spacing="50px">
-                    <Grid item xs={6} md={3} lg={3}>
+                    <Grid size={{ xs: 6, md: 3, lg: 3 }}>
                       <Stack
                         direction="row"
-                        spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
+                        sx={{ gap: { sm: "10px", xl: "4px", xxl: "10px" } }}
                         mb="6px"
                       >
                         <VuiBox
@@ -198,10 +198,10 @@ function Dashboard() {
                       </VuiTypography>
                       <VuiProgress value={60} color="info" sx={{ background: "#2D2E5F" }} />
                     </Grid>
-                    <Grid item xs={6} md={3} lg={3}>
+                    <Grid size={{ xs: 6, md: 3, lg: 3 }}>
                       <Stack
                         direction="row"
-                        spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
+                        sx={{ gap: { sm: "10px", xl: "4px", xxl: "10px" } }}
                         mb="6px"
                       >
                         <VuiBox
@@ -222,10 +222,10 @@ function Dashboard() {
                       </VuiTypography>
                       <VuiProgress value={60} color="info" sx={{ background: "#2D2E5F" }} />
                     </Grid>
-                    <Grid item xs={6} md={3} lg={3}>
+                    <Grid size={{ xs: 6, md: 3, lg: 3 }}>
                       <Stack
                         direction="row"
-                        spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
+                        sx={{ gap: { sm: "10px", xl: "4px", xxl: "10px" } }}
                         mb="6px"
                       >
                         <VuiBox
@@ -246,10 +246,10 @@ function Dashboard() {
                       </VuiTypography>
                       <VuiProgress value={60} color="info" sx={{ background: "#2D2E5F" }} />
                     </Grid>
-                    <Grid item xs={6} md={3} lg={3}>
+                    <Grid size={{ xs: 6, md: 3, lg: 3 }}>
                       <Stack
                         direction="row"
-                        spacing={{ sm: "10px", xl: "4px", xxl: "10px" }}
+                        sx={{ gap: { sm: "10px", xl: "4px", xxl: "10px" } }}
                         mb="6px"
                       >
                         <VuiBox
@@ -277,10 +277,10 @@ function Dashboard() {
           </Grid>
         </VuiBox>
         <Grid container spacing={3} direction="row" justifyContent="center" alignItems="stretch">
-          <Grid item xs={12} md={6} lg={8}>
+          <Grid size={{ xs: 12, md: 6, lg: 8 }}>
             <Projects />
           </Grid>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid size={{ xs: 12, md: 6, lg: 4 }}>
             <OrderOverview />
           </Grid>
         </Grid>

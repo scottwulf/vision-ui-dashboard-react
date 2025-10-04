@@ -31,7 +31,7 @@ function Footer() {
       py={2}
       pb={0}
     >
-      <VuiBox item xs={12} sx={{ textAlign: "center" }}>
+      <VuiBox size={{ xs: 12 }} sx={{ textAlign: "center" }}>
         <VuiTypography
           variant="button"
           sx={{ textAlign: "center", fontWeight: "400 !important" }}
@@ -63,7 +63,7 @@ function Footer() {
           for a better web
         </VuiTypography>
       </VuiBox>
-      <VuiBox item xs={10}>
+      <VuiBox size={{ xs: 10 }}>
         <VuiBox display="flex" justifyContent="center" flexWrap="wrap" mb={3}>
           <VuiBox mr={{ xs: "20px", lg: "46px" }}>
             <VuiTypography

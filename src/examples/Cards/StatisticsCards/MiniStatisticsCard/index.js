@@ -29,7 +29,20 @@ import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import colors from "assets/theme/base/colors";
 
-function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction }) {
+function MiniStatisticsCard({
+  bgColor = "white",
+  title = {
+    fontWeight: "medium",
+    text: "",
+  },
+  percentage = {
+    color: "success",
+    text: "",
+  },
+  direction = "right",
+  count,
+  icon,
+}) {
   const { info } = colors;
 
   return (
@@ -38,7 +51,7 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
         <VuiBox>
           <Grid container alignItems="center">
             {direction === "left" ? (
-              <Grid item>
+              <Grid>
                 <VuiBox
                   bgColor={info}
                   color="#fff"
@@ -54,7 +67,7 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
                 </VuiBox>
               </Grid>
             ) : null}
-            <Grid item xs={8}>
+            <Grid size={{ xs: 8 }}>
               <VuiBox ml={direction === "left" ? 2 : 0} lineHeight={1}>
                 <VuiTypography
                   variant="caption"
@@ -74,7 +87,7 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
               </VuiBox>
             </Grid>
             {direction === "right" ? (
-              <Grid item xs={4}>
+              <Grid size={{ xs: 4 }}>
                 <VuiBox
                   bgColor="#0075FF"
                   color="white"
@@ -99,20 +112,6 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
     </Card>
   );
 }
-
-// Setting default values for the props of MiniStatisticsCard
-MiniStatisticsCard.defaultProps = {
-  bgColor: "white",
-  title: {
-    fontWeight: "medium",
-    text: "",
-  },
-  percentage: {
-    color: "success",
-    text: "",
-  },
-  direction: "right",
-};
 
 // Typechecking props for the MiniStatisticsCard
 MiniStatisticsCard.propTypes = {

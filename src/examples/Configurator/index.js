@@ -124,9 +124,9 @@ function Configurator() {
           close
         </Icon>
       </VuiBox>
-
-      <Divider light />
-
+      <Divider sx={{
+        opacity: "0.6"
+      }} />
       <VuiBox pt={1.25} pb={3} px={3}>
         <VuiBox>
           <VuiTypography variant="h6" color="white">
@@ -214,7 +214,9 @@ function Configurator() {
           <VuiSwitch checked={fixedNavbar} onChange={handleFixedNavbar} color="info" />
         </VuiBox>
 
-        <Divider light />
+        <Divider sx={{
+          opacity: "0.6"
+        }} />
 
         <VuiBox mt={3} mb={2}>
           <VuiBox mb={2}>

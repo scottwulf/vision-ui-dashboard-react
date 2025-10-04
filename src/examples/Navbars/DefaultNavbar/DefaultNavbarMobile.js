@@ -51,18 +51,20 @@ function DefaultNavbarMobile({ open, close }) {
       sx={{
         marginTop: "8px",
       }}
-      MenuListProps={{
-        style: {
-          width: `calc(${width}px - 4rem)`,
-          backgroundImage: tripleLinearGradient(
-            palette.gradients.cover.main,
-            palette.gradients.cover.state,
-            palette.gradients.cover.stateSecondary,
-            palette.gradients.cover.deg
-          ),
-          backgroundColor: "unset !important",
-          padding: "8px",
-        },
+      slotProps={{
+        list: {
+          style: {
+            width: `calc(${width}px - 4rem)`,
+            backgroundImage: tripleLinearGradient(
+              palette.gradients.cover.main,
+              palette.gradients.cover.state,
+              palette.gradients.cover.stateSecondary,
+              palette.gradients.cover.deg
+            ),
+            backgroundColor: "unset !important",
+            padding: "8px",
+          },
+        }
       }}
     >
       <VuiBox px={0.5}>
